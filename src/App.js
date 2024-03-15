@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import List from './components/List/List';
-import { useState } from 'react';
+import RecycleBin from './RecycleBin';
 
 function App() {
   const [todos, setTodos] = useState(["write", "read", "sleep"])
@@ -10,6 +9,7 @@ function App() {
       <header className="App-header">
         <List todos={todos}/>
       </header>
+      <RecycleBin/>
     </div>
   );
 }
