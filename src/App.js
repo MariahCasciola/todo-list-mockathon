@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import RecycleBin from './RecycleBin';
+import logo from "./logo.svg";
+import "./App.css";
+import RecycleBin from "./RecycleBin";
+import { useState } from "react";
+import List from "./components/List";
 
 function App() {
+  const [todos, setTodos] = useState(["write", "read", "sleep", "eat"]);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <List todos={todos} />
       </header>
-      <RecycleBin/>
+      <RecycleBin />
     </div>
   );
 }
