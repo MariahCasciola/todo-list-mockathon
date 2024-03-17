@@ -1,8 +1,9 @@
 import React from "react";
 export default function List({ todos }) {
   return (
-    <>
-      <h1 className="h1">To Do List</h1>
+    <div className="mb-4">
+      <h1 className="h1 mb-3">To Do List</h1>
+
       <ul className="list-group">
         {todos.map((todo, index) => (
           <li key={index} className="list-group-item">
@@ -15,6 +16,7 @@ export default function List({ todos }) {
           </li>
         ))}
       </ul>
-    </>
+
+    </div>
   );
 }
