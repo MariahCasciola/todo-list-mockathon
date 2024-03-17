@@ -6,10 +6,9 @@ import List from "./components/List";
 function App() {
   const [todos, setTodos] = useState(["write", "read", "sleep", "eat"]);
   return (
-    <div className="App-header">
-      <header>
-        <List todos={todos} />
-      </header>
+    <div className="container mt-4">
+      <List todos={todos} />
+
       <RecycleBin />
     </div>
   );
